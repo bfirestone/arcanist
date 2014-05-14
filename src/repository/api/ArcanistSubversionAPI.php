@@ -551,7 +551,7 @@ EODIFF;
   public function getBlame($path) {
     $blame = array();
 
-    list($stdout) = $this->execxLocal('blame %s', $path);
+    list($stdout) = $this->execxLocal('blame %s@BASE', $path);
 
     $stdout = trim($stdout);
     if (!strlen($stdout)) {
